@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./dist/output.css" rel="stylesheet">
+    <title>Quiz Game</title>
+</head>
+
+<body class="bg-[#F4F0E5] box-border">
+
+    <div class="container mx-auto p-4 min-h-screen flex items-center">
+        
+        <div id="start-screen" class="screen ">
+            <h1 class="capitalize text-[#E86C2F] font-extrabold text-[clamp(2.5rem,8vw,4.5rem)] mb-6 drop-shadow-sm">
+                quiz time!
+            </h1>
+
+            <p class="text-[#6E6E6E] text-[clamp(1.1rem,3vw,1.5rem)] font-bold mb-10 mx-2 opacity-90">
+                Test your knowledge with these fun questions
+            </p>
+
+            <button id="start-btn" class="btn-style">
+                start quiz
+            </button>
+        </div>
+
+        <div id="quiz-screen" class="screen inactive">
+
+            <div class="quiz-header">
+                <h2 id="question-text" class="text-[clamp(1.5rem,3vw,3rem)] font-bold text-gray-800">Question goes here
+                </h2>
+            </div>
+
+            <div class="quiz-info flex justify-between font-medium text-gray-800">
+                <p>
+                    Question <span id="current-question">1</span> of <span id="total-questions">5</span>
+                </p>
+
+                <p class="capitalize">score: <span id="score">0</span></p>
+            </div>
+
+            <div id="answers-container" class="answers-container flex flex-col gap-3 mb-6">
+                <!-- Answer Button will be inserted here from our js code -->
+
+            </div>
+
+            <div class="progress-bar">
+                <div id="progress" class="progress">
+                </div>
+            </div>
+        </div>
+
+        <div id="result-screen" class="screen inactive">
+
+            <h1 class="capitalize text-[#E86C2F] font-extrabold text-[clamp(2rem,6vw,3.5rem)] mb-8 drop-shadow-sm">
+                quiz results
+            </h1>
+
+            <div class="result-info bg-[#F7F1E5] py-10 px-6 mb-10 rounded-2xl">
+                <p class="text-[#4A4A4A] text-[clamp(1.1rem,3vw,1.8rem)] font-medium mb-4 opacity-90">
+                    You scored <span id="final-score">3</span> out of <span id="max-score">5</span>
+                </p>
+
+                <div id="result-message"
+                    class="text-[#E86C2F] font-extrabold text-[clamp(1.5rem,4vw,2.5rem)] leading-tight">
+                    Good effort! Keep learning!
+                </div>
+            </div>
+
+            <button id="restart-btn" class="btn-style">
+                restart quiz
+            </button>
+        </div>
+    </div>
+
+    <script src="./src/script.js"></script>
+</body>
+
+</html>

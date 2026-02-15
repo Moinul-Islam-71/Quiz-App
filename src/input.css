@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+@utility screen {
+    @apply bg-[#FFFFFF] w-full max-w-[900px] text-center py-12 px-6 rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.1)] mx-auto mt-10 overflow-hidden;
+}
+
+@utility btn-style {
+    @apply capitalize text-white bg-[#E86C2F] hover:bg-[#d05b22] py-4 px-12 rounded-2xl font-bold text-[clamp(1rem,2vw,1.4rem)] transition-all duration-300 cursor-pointer shadow-md hover:shadow-orange-200 hover:-translate-y-1 active:scale-95 border-none outline-none;
+}
+
+@utility answer-btn {
+    @apply bg-[#F8F0E4] hover:bg-[#eadbc8] text-[#333] border-2 border-solid border-[#eadbc8] hover:border-[#dac0ae] rounded-xl p-4 cursor-pointer text-left transition-all duration-300 ease-in;
+
+    &.correct {
+        @apply bg-[#e6fff0] border-[#a3f0c4] text-[#28a745]
+    }
+
+    &.incorrect {
+        @apply bg-[#fff0f0] border-[#ffbdbd] text-[#dc3545]
+    }
+}
+
+@utility progress-bar {
+    @apply  w-full h-3 bg-[#eadbc8] rounded-full overflow-hidden mt-8;
+}
+
+@utility progress {
+    @apply w-[0%] h-full bg-[#E86C2F] rounded-full transition-all duration-500 ease-out;
+}
+
+@utility inactive {
+    @apply hidden;
+}
